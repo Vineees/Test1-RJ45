@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{% static 'css/vote/vote.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Votação RJ-45</title>
+</head>
+<body>
+  <h1 class="h1">Seja Bem-Vindo a Votação</h1>
+  <p class="p">Para votar você precisará entrar com sua matrícula</p>
+  <form method="post" class="form">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="matricula" class="form-label">Matrícula</label>
+      <input type="number" class="form-control" id="matricula" name="matricula" >
+      {% if messages %}
+      <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+    </div>
+    <select class="form-select" name="voto_rei">
+      <option selected>Selecione o Rei do RJ-45</option>
+      <option value="2021305180">Guilherme</option>
+      <option value="2020302405">Ian Cléverton</option>
+      <option value="2020307045">Daniel</option>
+      <option value="2021303766">Kauã</option>
+      <option value="2021303701">Gilmar</option>
+    </select>
+    <br>
+    <select class="form-select" name="voto_rainha">
+      <option selected>Selecione a Rainha do RJ-45</option>
+      <option value="2020301800">Alana</option>
+      <option value="2022306898">Kethelen</option>
+      <option value="2021303828">Milena</option>
+      <option value="2021303864">Monik</option>
+    </select>
+    <br>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</body>
+</html>

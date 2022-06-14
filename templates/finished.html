@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="{% static 'css/vote/vote.css' %}">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contagem de Votos</title>
+</head>
+<body>
+  <h1 class="h1">Parabéns, Você Votou!</h1>
+  <h2 class="h2">Veja a contagem dos votos abaixo:</h2>
+  <h2 class="h2">Reis</h2>
+  <h3 class="h3">Guilherme</h3>
+  <p class="p" style="text-align: center;">{{votosGui}}</p>
+  <h3 class="h3">Ian</h3>
+  <p class="p" style="text-align: center;">{{votosIan}}</p>
+  <h3 class="h3">Daniel</h3>
+  <p class="p" style="text-align: center;">{{votosDan}}</p>
+  <h3 class="h3">Kauã</h3>
+  <p class="p" style="text-align: center;">{{votosKau}}</p>
+  <h3 class="h3">Gilmar</h3>
+  <p class="p" style="text-align: center;">{{votosGil}}</p>
+  <h2 class="h2">Rainhas</h2>
+  <h3 class="h3">Alana</h3>
+  <p class="p" style="text-align: center;">{{votosAla}}</p>
+  <h3 class="h3">Khetelen</h3>
+  <p class="p" style="text-align: center;">{{votosKhe}}</p>
+  <h3 class="h3">Milena</h3>
+  <p class="p" style="text-align: center;">{{votosMil}}</p>
+  <h3 class="h3">Monik</h3>
+  <p class="p" style="text-align: center;">{{votosMon}}</p>
+</body>
+</html>
