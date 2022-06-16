@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-%&a82*po^p%wf6&mrsbu4)!&pp4ium%q6&o5idez^=g8^*tvr=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [ec2-44-204-77-238.compute-1.amazonaws.com]
+ALLOWED_HOSTS = ['ec2-44-204-77-238.compute-1.amazonaws.com']
 
 
 # Application definition
@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'votacao.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'votacaorj45',
+        'NAME': 'Dump_Alunos',
         'HOST': 'localhost',
         'PORT': '3306',
         'USER': 'root',
-        'PASSWORD': '986830',
+        'PASSWORD': '123456789',
     }
 }
 
